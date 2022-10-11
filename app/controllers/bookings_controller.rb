@@ -29,7 +29,7 @@ end
   private
 
   def booking_params
-    params.require(:booking).permit(:cosplay_id)
+    params.require(:booking).permit(:cosplay_id, :price, :category, :size)
   end
 
   def set_booking
