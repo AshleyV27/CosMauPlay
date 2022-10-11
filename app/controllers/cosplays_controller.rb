@@ -30,4 +30,5 @@ class CosplaysController < ApplicationController
   def cosplay_params
     params.require(:cosplay).permit(:name, :price, :category, :size)
   end
+
 end
