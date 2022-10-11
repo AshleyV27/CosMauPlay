@@ -1,0 +1,2 @@
+class CosplaysController < ApplicationController
+end
