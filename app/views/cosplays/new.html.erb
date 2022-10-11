@@ -1,6 +1,8 @@
 <h3>Create a new Costplay</h3>
 <%= simple_form_for @cosplay do |f| %>
   <%= f.input :name %>
-  <%= f.input :category %>
+  <%= f.input :category, collection: ["Anime", "Films", "Halloween", "Games"] %>
+  <%= f.input :price %>
+  <%= f.input :size, collection: ["Small", "Medium", "Large", "X-Large", "2XL"] %>
   <%= f.button :submit %>
 <% end %>
