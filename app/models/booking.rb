@@ -1,3 +1,4 @@
 class Booking < ApplicationRecord
-  has_many :cosplays
+  belongs_to :user
+  belongs_to :cosplay
 end
