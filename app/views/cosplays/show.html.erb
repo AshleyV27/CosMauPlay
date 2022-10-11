@@ -1,7 +1,6 @@
-<%# <% @cosplays.each do |cosplay| %>
- <%# <% @cosplay = Cosplay.find_by(cosplay: @cosplay) %>
- <%=@cosplay.name%>
-<%# <% end %>
-
-    <%# <% @list.movies.each do |movie| %>
-      <%# <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+<ul><%=@cosplay.name%>
+<li><%=@cosplay.size%></li>
+<li><%=@cosplay.category%></li>
+<li><%=@cosplay.price%></li>
+</ul>
+<%# to add image url %>
