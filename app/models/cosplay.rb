@@ -1,0 +1,2 @@
+class Cosplay < ApplicationRecord
+end
