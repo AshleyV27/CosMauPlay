@@ -10,7 +10,6 @@ class CosplaysController < ApplicationController
 
   def create
     @cosplay = Cosplay.new(cosplay_params)
-
     if @cosplay.save
       redirect_to cosplays_path(@cosplay)
     else
@@ -23,6 +22,7 @@ class CosplaysController < ApplicationController
   end
 
   def destroy
+    @cosplay = Cosplay.find(params[:id])
     @cosplay.destroy
     redirect_to cosplays_path, status: :see_other
   end

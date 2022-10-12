@@ -4,3 +4,7 @@
 <li><%=@cosplay.price%></li>
 <li><%=@cosplay.photos %>
 </ul>
+<%= link_to "Delete cosplay",cosplay_path(@cosplay),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%# to add image url %>
+
