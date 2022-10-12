@@ -2,6 +2,5 @@
 <li><%=@cosplay.size%></li>
 <li><%=@cosplay.category%></li>
 <li><%=@cosplay.price%></li>
-<li><%=@cosplay.photo %>
+<li><%=cl_image_tag @cosplay.photo.key,height: 300, width: 400, crop: :fill %>%>
 </ul>
-<%# to add image url %>
