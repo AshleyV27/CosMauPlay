@@ -7,4 +7,4 @@
 <%= link_to "Delete cosplay",cosplay_path(@cosplay),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <%# to add image url %>
-
+<%= link_to "book cosplay", new_cosplay_booking_path(@cosplay)%>

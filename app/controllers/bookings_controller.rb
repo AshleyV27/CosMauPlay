@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   before_action :set_bookmark, only: :destroy
-  before_action :set_list, only: [:new, :create]
+  before_action :set_cosplay, only: [:new, :create]
   def index
     @bookings = Booking.all
   end
@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.cosplay = @cosplay
     if @booking.save
-      redirect_to cosplay_path(@cosplay)
+      redirect_to cosplay_booking_path
     else
       @cosplay = cosplay.new
       render :new, status: :unprocessable_entity
@@ -25,7 +25,6 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to cosplay_path(@booking.cosplay), status: :see_other
   end
-end
 
   private
 
@@ -37,6 +36,7 @@ end
     @booking = Booking.find(params[:id])
   end
 
-  def set_list
-    @list = list.find(params[:list_id])
+  def set_cosplay
+    @cosplay = Cosplay.find(params[:cosplay_id])
   end
+end
