@@ -16,6 +16,11 @@ class CosplaysController < ApplicationController
     end
   end
 
+  def show
+    @cosplay = Cosplay.find(params[:id])
+
+  end
+
   def destroy
     @cosplay.destroy
     redirect_to cosplays_path, status: :see_other
