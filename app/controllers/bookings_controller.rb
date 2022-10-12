@@ -7,16 +7,19 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @cosplay = Cosplay.find(params[:cosplay_id])
     @booking = Booking.new
   end
 
   def create
+    @user = current_user
     @booking = Booking.new(booking_params)
     @booking.cosplay = @cosplay
+    @booking.user = @user
     if @booking.save
-      redirect_to cosplay_booking_path
+      redirect_to cosplay_bookings_path(@cosplay)
     else
-      @cosplay = cosplay.new
+      @cosplay = Cosplay.new
       render :new, status: :unprocessable_entity
     end
   end
@@ -29,7 +32,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:cosplay_id, :price, :category, :size)
+    params.require(:booking).permit(:cosplay_id, :starting_date, :ending_date)
   end
 
   def set_booking
