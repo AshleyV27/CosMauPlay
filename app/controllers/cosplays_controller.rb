@@ -1,6 +1,7 @@
 class CosplaysController < ApplicationController
   def index
     @cosplays = Cosplay.all
+    # @cosplay = Cosplay.photo
   end
 
   def new
@@ -34,7 +35,7 @@ class CosplaysController < ApplicationController
   end
 
   def cosplay_params
-    params.require(:cosplay).permit(:name, :price, :category, :size, :photo)
+    params.require(:cosplay).permit(:name, :price, :category, :size, photos: [])
   end
 
 end
