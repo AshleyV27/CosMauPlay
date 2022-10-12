@@ -27,6 +27,15 @@ class CosplaysController < ApplicationController
     redirect_to cosplays_path, status: :see_other
   end
 
+  def edit
+    @cosplay = Cosplay.find(params[:id])
+  end
+
+  def update
+    @cosplay = Cosplay.find(params[:id])
+    @cosplay.update(cosplay_params)
+    redirect_to cosplays_path(@cosplay)
+  end
 
   private
 
