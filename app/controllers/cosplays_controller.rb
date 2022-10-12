@@ -9,8 +9,9 @@ class CosplaysController < ApplicationController
 
   def create
     @cosplay = Cosplay.new(cosplay_params)
-    if @cosplay.save
 
+    if @cosplay.save
+      redirect_to cosplays_path(@cosplay)
     else
       render :new, status: :unprocessable_entity
     end
@@ -18,7 +19,6 @@ class CosplaysController < ApplicationController
 
   def show
     @cosplay = Cosplay.find(params[:id])
-
   end
 
   def destroy
