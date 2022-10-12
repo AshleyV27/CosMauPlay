@@ -1,5 +1,6 @@
  <% @cosplays.each do |cosplay| %>
  <ul><%= cosplay.name %></ul>
+ <ul><%= cl_image_tag cosplay.photo.key, class:'cosplay_image' %></ul>
  <ul><%= cosplay.category %></ul>
  <ul><%= cosplay.price %></ul>
  <ul><%= cosplay.size %></ul>

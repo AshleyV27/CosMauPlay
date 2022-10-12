@@ -44,7 +44,7 @@ class CosplaysController < ApplicationController
   end
 
   def cosplay_params
-    params.require(:cosplay).permit(:name, :price, :category, :size, photos: [])
+    params.require(:cosplay).permit(:name, :price, :category, :size, :photo)
   end
 
 end
