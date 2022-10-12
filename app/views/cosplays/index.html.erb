@@ -1,5 +1,6 @@
  <% @cosplays.each do |cosplay| %>
  <ul><%= cosplay.name %></ul>
- <ul><%= cosplay.photos %></ul>
+ <ul><%= cl_image_tag cosplay.photo.key, class:'cosplay_image' %></ul>
+
  <%= link_to "Show More", cosplay_path(cosplay)%>
 <% end %>
