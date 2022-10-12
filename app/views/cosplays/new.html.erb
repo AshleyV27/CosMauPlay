@@ -4,5 +4,6 @@
   <%= f.input :category, collection: ["Anime", "Films", "Halloween", "Games"] %>
   <%= f.input :price %>
   <%= f.input :size, collection: ["Small", "Medium", "Large", "X-Large", "2XL"] %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>

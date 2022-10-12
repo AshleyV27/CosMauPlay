@@ -26,6 +26,7 @@ class CosplaysController < ApplicationController
     redirect_to cosplays_path, status: :see_other
   end
 
+
   private
 
   def set_list
@@ -33,7 +34,7 @@ class CosplaysController < ApplicationController
   end
 
   def cosplay_params
-    params.require(:cosplay).permit(:name, :price, :category, :size)
+    params.require(:cosplay).permit(:name, :price, :category, :size, :photo)
   end
 
 end
