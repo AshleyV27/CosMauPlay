@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to cosplay_booking_path
     else
-      @cosplay = cosplay.new
+      @cosplay = Cosplay.new
       render :new, status: :unprocessable_entity
     end
   end
