@@ -1,3 +1,7 @@
  <% @cosplays.each do |cosplay| %>
- <%= cosplay.name %>
- <% end %>
+ <ul><%= cosplay.name %></ul>
+  <%= cosplay.category %>
+  <%= cosplay.price %>
+  <%= cosplay.size %>
+ <%= link_to "Show More", cosplay_path(cosplay)%>
+<% end %>
