@@ -1,6 +1,7 @@
 class CosplaysController < ApplicationController
   def index
     @cosplays = Cosplay.all
+    # @cosplay = Cosplay.photo
   end
 
   def new
@@ -26,6 +27,7 @@ class CosplaysController < ApplicationController
     redirect_to cosplays_path, status: :see_other
   end
 
+
   private
 
   def set_list
@@ -33,7 +35,7 @@ class CosplaysController < ApplicationController
   end
 
   def cosplay_params
-    params.require(:cosplay).permit(:name, :price, :category, :size)
+    params.require(:cosplay).permit(:name, :price, :category, :size, photos: [])
   end
 
 end
