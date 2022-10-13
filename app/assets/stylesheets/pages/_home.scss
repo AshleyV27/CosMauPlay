@@ -1,17 +1,51 @@
 // Specific CSS for your home-page
 // @import "component/navbar"
-.cosplay_image {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
- .container h1 {
-  color: beige;
+// .cosplay_image {
+//   border: 1px solid #ddd;
+//   border-radius: 4px;
+//   padding: 5px;
+//   width: 150px;
+// }
+//  .container h1 {
+//   color: beige;
 
- }
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+//  }
+// .banner {
+//   background-size: cover;
+//   background-position: center;
+//   padding: 150px 0;
+// }
+.text-header {
+  text-align: center;
+  font-size: 100px;
+  color: rgb(142, 142, 223)
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #6853b3 0%,
+    #799fb9 29%,
+    #5299a5 67%,
+    #86e2e6 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 90px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
