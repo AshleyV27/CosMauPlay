@@ -19,7 +19,7 @@ cosplays_bat.photo.attach(io: file,
 cosplays_bat.user = user
 cosplays_bat.save!
 
-cosplays_spi = Cosplay.new(name: "SpiderMan", price: "1455", category: "cartoon", size: "medium")
+cosplays_spi = Cosplay.new(name: "SpiderMan", price: "1455", category: "Film", size: "medium")
 file = URI.open("https://images.unsplash.com/photo-1636569061713-0212bd19e3e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80")
 cosplays_spi.photo.attach(io: file,
                           filename: "Spiderman.jpg",
@@ -28,7 +28,7 @@ cosplays_spi.photo.attach(io: file,
 cosplays_spi.user = user
 cosplays_spi.save!
 
-cosplays_ant = Cosplay.new(name: "Harley Quinn", price: "2300", category: "cartoon", size: "small")
+cosplays_ant = Cosplay.new(name: "Harley Quinn", price: "2300", category: "Cartoon", size: "small")
 file = URI.open("https://images.unsplash.com/photo-1553717188-e8b63785ee24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
 cosplays_ant.photo.attach(io: file,
                           filename: "Harley quinn.jpg",
@@ -37,7 +37,7 @@ cosplays_ant.user = user2
 cosplays_ant.save!
 
 
-cosplays_dea = Cosplay.new(name: "Jocker", price: "2000", category: "cartoon", size: "extra large")
+cosplays_dea = Cosplay.new(name: "Jocker", price: "2000", category: "Film", size: "extra large")
 file = URI.open("https://images.unsplash.com/photo-1568345889086-379dc9b8635b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 cosplays_dea.photo.attach(io: file,
                           filename: "Jocker.jpg",
@@ -47,7 +47,7 @@ cosplays_dea.save!
 
 
 
-cosplays_de = Cosplay.new(name: "Mulan", price: "1200", category: "cartoon", size: "extra large")
+cosplays_de = Cosplay.new(name: "Mulan", price: "1200", category: "Film", size: "extra large")
 file = URI.open("https://images.unsplash.com/photo-1600385546605-536b691202df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=476&q=80")
 cosplays_de.photo.attach(io: file,
                           filename: "Mulan.jpg",
@@ -62,7 +62,7 @@ cosplays_de.save!
 # cosplays_car.save!
 
 
-cosplays_car = Cosplay.new(name: "Transformers", price: "10000", category: "cartoon", size: "large")
+cosplays_car = Cosplay.new(name: "Transformers", price: "10000", category: "Film", size: "large")
 file = URI.open("https://images.halloweencostumes.com/products/41834/1-2/child-optimus-prime-prestige-costume-update-2.jpg")
 cosplays_car.photo.attach(io: file,
                           filename: "Transfomer.jpg",
@@ -70,7 +70,7 @@ cosplays_car.photo.attach(io: file,
 cosplays_car.user = user
 cosplays_car.save!
 
-cosplays_nar = Cosplay.new(name: "Naruto", price: "850", category: "cartoon", size: "slim-fit")
+cosplays_nar = Cosplay.new(name: "Naruto", price: "850", category: "Anime", size: "slim-fit")
 file = URI.open("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5a16c3d5-f041-41e3-80ab-f2f67f4b07bd/d1pp953-56f39e2a-b901-448a-accc-cbc81a77cdbf.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVhMTZjM2Q1LWYwNDEtNDFlMy04MGFiLWYyZjY3ZjRiMDdiZFwvZDFwcDk1My01NmYzOWUyYS1iOTAxLTQ0OGEtYWNjYy1jYmM4MWE3N2NkYmYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.4lmROBqiuetLH6YFsZ6BHjIpRMmS9Gz9A8u_jEFIFWE")
 cosplays_nar.photo.attach(io: file,
                           filename: "Naruto.jpg",
@@ -78,7 +78,7 @@ cosplays_nar.photo.attach(io: file,
 cosplays_nar.user = user2
 cosplays_nar.save!
 
-cosplays_d = Cosplay.new(name: "Deadpool", price: "4500", category: "cartoon", size: "xxxxL")
+cosplays_d = Cosplay.new(name: "Deadpool", price: "4500", category: "Film", size: "xxxxL")
 file = URI.open("https://media.simcosplay.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/d/e/deadpool_2_wade_wilson_cosplay_costume.jpg")
 cosplays_d.photo.attach(io: file,
                           filename: "Deadpool.jpg",

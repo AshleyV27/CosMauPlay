@@ -34,3 +34,45 @@
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+.button-nav {
+  font-family: cursive;
+  background: #66c2ce;
+  color: #161515;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 15px;
+  width: auto;
+  position: relative;
+
+
+  &::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    left: 85%;
+    top: 31%;
+    right: 5%;
+    bottom: 0;
+    opacity: 0;
+
+  }
+
+  &:hover {
+    background: #58c8e4;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px #dadadde3;
+    padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+
+    &::after {
+      opacity: 1;
+      transition: all 0.5s;
+
+    }
+  }
+
+
+}
