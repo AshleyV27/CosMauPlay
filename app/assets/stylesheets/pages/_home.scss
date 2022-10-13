@@ -37,6 +37,8 @@
 
 .carousel-inner {
   position: relative;
+  max-width: 100%;
+  height: auto;
   .button-cosplay {
     position: absolute;
     right: 50%;
