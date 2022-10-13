@@ -1,6 +1,17 @@
- <% @cosplays.each do |cosplay| %>
- <ul><%= cosplay.name %></ul>
- <ul><%= cl_image_tag cosplay.photo.key, class:'cosplay_image' %></ul>
-
- <%= link_to "Show More", cosplay_path(cosplay)%>
-<% end %>
+<div class="container">
+  <div class="cards">
+    <% @cosplays.each do |cosplay| %>
+      <div class="card card-grid">
+      <div class="cosplay-image">
+        <%= cl_image_tag cosplay.photo.key %>
+      </div>
+        <div class="card-body">
+          <h4 class="card-title"><%= cosplay.name  %></h4>
+          <p class="card-text"><%= cosplay.price  %></p>
+          <p class="card-text"><%= cosplay.category  %></p>
+          <%= link_to "Show More", cosplay_path(cosplay), class: "btn btn-primary"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
