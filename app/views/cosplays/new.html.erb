@@ -3,7 +3,7 @@
  <h3>Create a new Cosplay</h3>
  <%= simple_form_for @cosplay do |f| %>
    <%= f.input :name %>
-   <%= f.input :category, collection: ["Anime", "Films", "Halloween", "Games"] %>
+   <%= f.input :category, collection: ["Anime", "Films", "Halloween", "Games","Cartoon"] %>
    <%= f.input :price %>
    <%= f.input :size, collection: ["Small", "Medium", "Large", "X-Large", "2XL"] %>
    <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
