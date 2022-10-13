@@ -37,6 +37,10 @@ class CosplaysController < ApplicationController
     redirect_to cosplays_path(@cosplay)
   end
 
+  def my_cosplays
+    @my_cosplays = Cosplay.where(user: current_user)
+  end
+
   private
 
   def set_list
