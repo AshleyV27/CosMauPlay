@@ -1,0 +1,9 @@
+<h3>Update your Cosplay</h3>
+<%= simple_form_for @cosplay do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category, collection: ["Anime", "Films", "Halloween", "Games"] %>
+  <%= f.input :price %>
+  <%= f.input :size, collection: ["Small", "Medium", "Large", "X-Large", "2XL"] %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
+  <%= f.button :submit %>
+<% end %>
