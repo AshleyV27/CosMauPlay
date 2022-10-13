@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'my_cosplays', to: 'cosplays#my_cosplays'
   resources :cosplays do
-    resources :bookings, only: [:new, :create, :index]
+    resources :bookings, only: [:new, :create]
   end
+  resources :bookings, only: [:destroy, :index]
 end
