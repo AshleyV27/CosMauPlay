@@ -1,8 +1,15 @@
+
 booking list
-<% @bookings.each do |booking| %>
-<br>
-  <%= booking.cosplay_id %>
-  <%= booking.starting_date %>
-  <%= booking.ending_date %>
-  <%# <%= link_to "delete",booking_path(booking) %>
-<% end %>
+<div class="container ">
+
+  <% @bookings.each do |booking| %>
+<div class="card-product d-flex">
+    <%= cl_image_tag booking.cosplay.photo.key,class:'cosplay_image'%>
+    <div class="card-product-infos d-flex justify-content-around w-100">
+      <h2><%= booking.cosplay.name %></h2>
+      <p><%= booking.starting_date %> <%= booking.ending_date %></p>
+      <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"  %>
+    </div>
+</div>
+  <% end %>
+</div>
