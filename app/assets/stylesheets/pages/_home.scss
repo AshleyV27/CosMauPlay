@@ -1,5 +1,14 @@
 // Specific CSS for your home-page
 
+// @import "component/navbar"
+.cosplay_image {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px slategrey;
+  padding: 5px;
+  width: 150px;
+  }
+
 .text-header {
   text-align: center;
   font-size: 100px;
@@ -45,4 +54,20 @@
   }
 
 
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
