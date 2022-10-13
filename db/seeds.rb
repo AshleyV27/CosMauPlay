@@ -17,7 +17,7 @@ cosplays_bat.photo.attach(io: file,
 cosplays_bat.user = user
 cosplays_bat.save!
 
-cosplays_spi = Cosplay.new(name: "Spider", price: "1455", category: "cartoon", size: "medium")
+cosplays_spi = Cosplay.new(name: "SpiderMan", price: "1455", category: "cartoon", size: "medium")
 file = URI.open("https://images.unsplash.com/photo-1636569061713-0212bd19e3e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80")
 cosplays_spi.photo.attach(io: file,
                           filename: "Spiderman.jpg",
@@ -26,7 +26,7 @@ cosplays_spi.photo.attach(io: file,
 cosplays_spi.user = user
 cosplays_spi.save!
 
-cosplays_ant = Cosplay.new(name: "Harley quinn", price: "231", category: "cartoon", size: "small")
+cosplays_ant = Cosplay.new(name: "Harley Quinn", price: "231", category: "cartoon", size: "small")
 file = URI.open("https://images.unsplash.com/photo-1553717188-e8b63785ee24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
 cosplays_ant.photo.attach(io: file,
                           filename: "Harley quinn.jpg",
@@ -60,7 +60,7 @@ cosplays_de.save!
 # cosplays_car.save!
 
 
-cosplays_car = Cosplay.new(name: "Cars", price: "10000", category: "cartoon", size: "large")
+cosplays_car = Cosplay.new(name: "Transformers", price: "10000", category: "cartoon", size: "large")
 file = URI.open("https://images.halloweencostumes.com/products/41834/1-2/child-optimus-prime-prestige-costume-update-2.jpg")
 cosplays_car.photo.attach(io: file,
                           filename: "Transfomer.jpg",
