@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
 
-  before_action :set_bookmark, only: :destroy
+  before_action :set_booking, only: :destroy
   before_action :set_cosplay, only: [:new, :create]
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def new
@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to cosplay_path(@booking.cosplay), status: :see_other
+    redirect_to bookings_path, status: :see_other
   end
 
   private
