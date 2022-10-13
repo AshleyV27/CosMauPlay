@@ -1,7 +1,6 @@
 class CosplaysController < ApplicationController
   def index
     @cosplays = Cosplay.all
-    # @cosplay = Cosplay.photo
   end
 
   def new
