@@ -1,7 +1,6 @@
 class CosplaysController < ApplicationController
   def index
     @cosplays = Cosplay.all
-    # @cosplay = Cosplay.photo
   end
 
   def new
@@ -35,6 +34,10 @@ class CosplaysController < ApplicationController
     @cosplay = Cosplay.find(params[:id])
     @cosplay.update(cosplay_params)
     redirect_to cosplays_path(@cosplay)
+  end
+
+  def my_cosplays
+    @my_cosplays = Cosplay.where(user: current_user)
   end
 
   private
