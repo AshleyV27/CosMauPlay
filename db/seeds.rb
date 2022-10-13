@@ -1,4 +1,6 @@
 require "open-uri"
+require "yaml"
+
 Cosplay.destroy_all
 User.destroy_all
 Booking.destroy_all

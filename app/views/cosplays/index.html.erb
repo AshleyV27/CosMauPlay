@@ -1,3 +1,5 @@
+
+
 <div class="container">
   <div class="cards">
     <% @cosplays.each do |cosplay| %>
@@ -7,7 +9,7 @@
       </div>
         <div class="card-body">
           <h4 class="card-title"><%= cosplay.name  %></h4>
-          <p class="card-text"> RS<%= cosplay.price%></p>
+          <p class="card-text"> Rs<%= cosplay.price%></p>
           <p class="card-text"><%= cosplay.category  %></p>
           <%= link_to "Show More", cosplay_path(cosplay), class: "btn btn-primary"%>
         </div>

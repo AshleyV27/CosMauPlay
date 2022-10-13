@@ -1,8 +1,26 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand logo_icon" do %>
-      <%= image_tag "https://images.assetsdelivery.com/compings_v2/doublerdesign/doublerdesign2111/doublerdesign211100139.jpg" %>
-    <% end %>
+      <div class="container">
+          <%= form_with url: cosplays_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+            params[:query],
+              class: "form-control",
+              placeholder: "Find a Cosplay"%>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+            <% end %>
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+             <div id="movies">
+                <%# <% @cosplay.each do |cosplay| %>
+                <%# <h4><%= cosplay.name %></h4>
+                <%# <p><%= cosplay.category%></p>
+               <%# <% end %>
+              </div>
+           </div>
+          </div>
+      </div>
+      <%= link_to "#", class: "navbar-brand logo_icon" do %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,3 +48,6 @@
     </div>
   </div>
 </div>
+
+
+<%# check indentation and implement search %>
