@@ -1,8 +1,11 @@
-booking list
-<% @bookings.each do |booking| %>
-<br>
+
+
+<div class="container">
+ Booking list
+ <% @bookings.each do |booking| %>
   <%= booking.cosplay.name %>
   <%= booking.starting_date %>
   <%= booking.ending_date %>
   <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<% end %>
+ <% end %>
+</div>
