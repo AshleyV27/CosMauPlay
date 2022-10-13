@@ -50,7 +50,9 @@ file = URI.open("https://media.simcosplay.com/media/catalog/product/cache/1/imag
 cosplays_dea.photo.attach(io: file,
                           filename: "Deadpool.jpg",
                           content_type: "image/jpg")
-cosplays_dea.save!
+cosplays_dea.save!|
+
+
 # # # Examples:
 # #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
