@@ -31,18 +31,26 @@ cosplays_dea.photo.attach(io: file,
                           content_type: "image/jpg")
 cosplays_dea.save!
 
-# cosplays_car = Cosplay.new(name: "Cars", price: "10000", category: "cartoon", size: "large")
-# file = URI.open("https://i.etsystatic.com/19750816/r/il/b2956a/3571685226/il_fullxfull.3571685226_11n2.jpg")
-# cosplays_spi.photo.attach(io: file,
-#                           filename: "Spiderman.jpg",
-#                           content_type: "image/jpg")
-# cosplays_car.save!
+cosplays_car = Cosplay.new(name: "Cars", price: "10000", category: "cartoon", size: "large")
+file = URI.open("https://images.halloweencostumes.com/products/41834/1-2/child-optimus-prime-prestige-costume-update-2.jpg")
+cosplays_car.photo.attach(io: file,
+                          filename: "Transfomer.jpg",
+                          content_type: "image/jpg")
+cosplays_car.save!
 
-# cosplays_nar = Cosplay.new(name: "Naruto", price: "85", category: "cartoon", size: "slim-fit")
-# cosplays_nar.save!
+cosplays_nar = Cosplay.new(name: "Naruto", price: "85", category: "cartoon", size: "slim-fit")
+file = URI.open("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5a16c3d5-f041-41e3-80ab-f2f67f4b07bd/d1pp953-56f39e2a-b901-448a-accc-cbc81a77cdbf.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVhMTZjM2Q1LWYwNDEtNDFlMy04MGFiLWYyZjY3ZjRiMDdiZFwvZDFwcDk1My01NmYzOWUyYS1iOTAxLTQ0OGEtYWNjYy1jYmM4MWE3N2NkYmYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.4lmROBqiuetLH6YFsZ6BHjIpRMmS9Gz9A8u_jEFIFWE")
+cosplays_nar.photo.attach(io: file,
+                          filename: "Naruto.jpg",
+                          content_type: "image/jpg")
+cosplays_nar.save!
 
-# cosplays_dea = Cosplay.new(name: "Deadpool", price: "15", category: "cartoon", size: "xxxxL")
-# cosplays_dea.save!
+cosplays_dea = Cosplay.new(name: "Deadpool", price: "15", category: "cartoon", size: "xxxxL")
+file = URI.open("https://media.simcosplay.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/d/e/deadpool_2_wade_wilson_cosplay_costume.jpg")
+cosplays_dea.photo.attach(io: file,
+                          filename: "Deadpool.jpg",
+                          content_type: "image/jpg")
+cosplays_dea.save!
 # # # Examples:
 # #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
