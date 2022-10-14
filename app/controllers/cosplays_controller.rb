@@ -1,15 +1,9 @@
 class CosplaysController < ApplicationController
   def index
-    @cosplays = Cosplay.all
     if params[:query].present?
-
-      sql_query = <<~SQL
-        cosplay.name @@ :query
-        OR cosplay.price @@ :query
-      SQL
-      @cosplay = Cosplay.joins(:booking).where(sql_query, query: "%#{params[:query]}%")
+      @cosplays = Cosplay.where("name ILIKE ?", "%#{params[:query]}%")
     else
-      @cosplay = Cosplay.all
+      @cosplays = Cosplay.all
     end
   end
 
