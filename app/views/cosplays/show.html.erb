@@ -1,10 +1,10 @@
 <div>
-<ul><%=@cosplay.name%>
-<li><%=@cosplay.size%></li>
-<li><%=@cosplay.category%></li>
-<li><%=@cosplay.price%></li>
-</ul>
-<li><%= cl_image_tag @cosplay.photo.key,class:'cosplay_image'%></li>
+ <ul><%=@cosplay.name%>
+   <li><%=@cosplay.size%></li>
+   <li><%=@cosplay.category%></li>
+   <li><%=@cosplay.price%></li>
+ </ul>
+ <li><%= cl_image_tag @cosplay.photo.key,class:'cosplay_image'%></li>
 </div>
 <%= link_to "Delete cosplay",cosplay_path(@cosplay),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
