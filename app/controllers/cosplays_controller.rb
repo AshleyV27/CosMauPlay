@@ -1,6 +1,10 @@
 class CosplaysController < ApplicationController
   def index
-    @cosplays = Cosplay.all
+    if params[:query].present?
+      @cosplays = Cosplay.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @cosplays = Cosplay.all
+    end
   end
 
   def new
@@ -49,5 +53,4 @@ class CosplaysController < ApplicationController
   def cosplay_params
     params.require(:cosplay).permit(:name, :price, :category, :size, :photo)
   end
-
 end
