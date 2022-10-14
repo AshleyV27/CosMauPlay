@@ -38,3 +38,18 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.card-products {
+  margin-top: 50px;
+  overflow: hidden;
+  height: 213px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+}
+.btn_cos{
+  margin-top: 15px;
+  margin-bottom: -41px;
+}
