@@ -7,8 +7,8 @@
 <li><%= cl_image_tag @cosplay.photo.key,class:'cosplay_image'%></li>
 </div>
 <%= link_to "Delete cosplay",cosplay_path(@cosplay),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
 
-<%= link_to "Update Cosplay", edit_cosplay_path(@cosplay)%>
+<%= link_to "Update Cosplay", edit_cosplay_path(@cosplay), class: "btn btn-primary" %>
 
-<%= link_to "book cosplay", new_cosplay_booking_path(@cosplay)%>
+<%= link_to "book cosplay", new_cosplay_booking_path(@cosplay), class: "btn btn-primary" %>
