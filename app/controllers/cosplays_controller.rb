@@ -1,6 +1,16 @@
 class CosplaysController < ApplicationController
   def index
     @cosplays = Cosplay.all
+    if params[:query].present?
+
+      sql_query = <<~SQL
+        cosplay.name @@ :query
+        OR cosplay.price @@ :query
+      SQL
+      @cosplay = Cosplay.joins(:booking).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @cosplay = Cosplay.all
+    end
   end
 
   def new
@@ -49,5 +59,4 @@ class CosplaysController < ApplicationController
   def cosplay_params
     params.require(:cosplay).permit(:name, :price, :category, :size, :photo)
   end
-
 end
