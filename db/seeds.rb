@@ -46,6 +46,21 @@ cosplays_dea.user = user2
 cosplays_dea.save!
 
 
+cosplays_dea = Cosplay.new(name: "Jasmin", price: "1200", category: "Film", size: "extra large")
+file = URI.open("https://i.etsystatic.com/6251032/r/il/b6e5d9/2019114818/il_794xN.2019114818_m4kl.jpg")
+cosplays_dea.photo.attach(io: file,
+                          filename: "Jasmin.jpg",
+                          content_type: "image/jpg")
+cosplays_dea.user = user2
+cosplays_dea.save!
+
+cosplays_dea = Cosplay.new(name: "Mother Gothel", price: "2200", category: "Film", size: "extra large")
+file = URI.open("https://i.etsystatic.com/10699546/r/il/71afdf/4041919253/il_794xN.4041919253_c8ht.jpg")
+cosplays_dea.photo.attach(io: file,
+                          filename: "Mother Gothel.jpg",
+                          content_type: "image/jpg")
+cosplays_dea.user = user2
+cosplays_dea.save!
 
 cosplays_de = Cosplay.new(name: "Mulan", price: "1200", category: "Film", size: "extra large")
 file = URI.open("https://images.unsplash.com/photo-1600385546605-536b691202df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=476&q=80")
@@ -54,12 +69,6 @@ cosplays_de.photo.attach(io: file,
                           content_type: "image/jpg")
 cosplays_de.user = user2
 cosplays_de.save!
-# cosplays_car = Cosplay.new(name: "Cars", price: "10000", category: "cartoon", size: "large")
-# file = URI.open("https://i.etsystatic.com/19750816/r/il/b2956a/3571685226/il_fullxfull.3571685226_11n2.jpg")
-# cosplays_spi.photo.attach(io: file,
-#                           filename: "Spiderman.jpg",
-#                           content_type: "image/jpg")
-# cosplays_car.save!
 
 
 cosplays_car = Cosplay.new(name: "Transformers", price: "10000", category: "Film", size: "large")
@@ -85,6 +94,8 @@ cosplays_d.photo.attach(io: file,
                           content_type: "image/jpg")
 cosplays_d.user = user
 cosplays_d.save!
+
+
 
 
 # # # Examples:
