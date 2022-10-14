@@ -1,7 +1,18 @@
-<div>
+<div class="container">
+  <div class="cards">
+<div class="big_card">
+<div class ="title">
  <h1>My Cosplays</h1>
 </div>
+
+<div class="cards card-grid">
+<div class="cosplay-image">
 <% @my_cosplays.each do |cosplay| %>
- <%=cosplay.name%>
- <%=cl_image_tag cosplay.photo.key,class:'cosplay_image' %>
+
+
+ <%=cl_image_tag cosplay.photo.key%>
+ <div class="card-body">
+  <h4 class="card-title"><%= cosplay.name  %></h4>
 <% end  %>
+</div>
+</div>
