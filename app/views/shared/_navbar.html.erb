@@ -8,10 +8,9 @@
             class: "form-control",
             placeholder: "Find a cosplay"
           %>
-           <%= submit_tag "Search", class: "btn btn-primary btn-sm"  %>
+           <%= submit_tag "Search", class: "btn btn-primary btn-sm btn-search"  %>
         <% end %>
       </div>
-
     <%= link_to "#", class: "navbar-brand logo-icon" do %>
       <%= image_tag "https://images.assetsdelivery.com/compings_v2/doublerdesign/doublerdesign2111/doublerdesign211100139.jpg" %>
     <% end %>
@@ -22,12 +21,9 @@
 
       <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
 
-
-         
-          </button>
-
-        </div>
       </form>
+    </div>
+
      <ul class="navbar-nav me-auto">
         <%= link_to "Home", "/", class: "nav-link button-nav" %>
         <%= link_to "Cosplays", "/cosplays", class: "nav-link button-nav" %>
