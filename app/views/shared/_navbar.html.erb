@@ -1,47 +1,49 @@
-
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid nav">
-    <div class="search-form-control form-group">
-        <%= form_with url: cosplays_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a cosplay"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary btn-sm"  %>
-      <% end %>
-    </div>
+      <div class="search-form-control form-group">
+         <%= form_with url: cosplays_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a cosplay"
+          %>
+           <%= submit_tag "Search", class: "btn btn-primary btn-sm btn-search"  %>
+        <% end %>
+      </div>
     <%= link_to "#", class: "navbar-brand logo-icon" do %>
       <%= image_tag "https://images.assetsdelivery.com/compings_v2/doublerdesign/doublerdesign2111/doublerdesign211100139.jpg" %>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
-      </span>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
       <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
+
       </form>
     </div>
-    <ul class="navbar-nav me-auto">
-      <%= link_to "Home", "/", class: "nav-link button-nav" %>
-      <%= link_to "Cosplays", "/cosplays", class: "nav-link button-nav" %>
-      <% if user_signed_in? %>
-        <li class="nav-item active"> </li>
-        <li class="nav-item"></li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://avatars.githubusercontent.com/u/112051440?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "Loan a Cosplay", "/cosplays/new", class: "dropdown-item" %>
-            <%= link_to "My booking", "/bookings", class: "dropdown-item" %>
-            <%= link_to "My Cosplay", "/my_cosplays", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link button-nav" %>
-        </li>
-      <% end %>
-    </ul>
+
+     <ul class="navbar-nav me-auto">
+        <%= link_to "Home", "/", class: "nav-link button-nav" %>
+        <%= link_to "Cosplays", "/cosplays", class: "nav-link button-nav" %>
+        <% if user_signed_in? %>
+          <li class="nav-item active"> </li>
+          <li class="nav-item"></li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://avatars.githubusercontent.com/u/112051440?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Loan a Cosplay", "/cosplays/new", class: "dropdown-item" %>
+              <%= link_to "My booking", "/bookings", class: "dropdown-item" %>
+              <%= link_to "My Cosplay", "/my_cosplays", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link button-nav" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
