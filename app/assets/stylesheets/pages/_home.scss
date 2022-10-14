@@ -20,10 +20,10 @@
 {
   background-image: linear-gradient(
     -225deg,
-    #5279b3 0%,
-    #3b5668 29%,
-    #288192 67%,
-    #0c0c0c 100%
+    #6853b3 0%,
+    #799fb9 29%,
+    #5299a5 67%,
+    #86e2e6 100%
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -49,6 +49,7 @@
   position: relative;
   max-width: 100%;
   height: auto;
+  background-color: rgb(122, 205, 243);
   padding: 10px;
   font-size: 20px;
   top: 0;
@@ -75,9 +76,4 @@
 .column img {
   margin-top: 8px;
   vertical-align: middle;
-}
-
-.layout {
-  padding-bottom: 100px;
-  min-height: 95vh;
 }

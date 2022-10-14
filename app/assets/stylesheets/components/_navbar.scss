@@ -18,9 +18,9 @@
 
 .search-form-control .btn {
   position: absolute;
-  top: 23px;
-  bottom: 48px;
-  right: 3px;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
 }
 
 .search-form-control .form-control {
@@ -37,9 +37,7 @@
 
 .button-nav {
   font-family: cursive;
-
-  background: #fdfdfd;
-
+  background: #66c2ce;
   color: #161515;
   cursor: pointer;
   border: 0;
@@ -63,7 +61,7 @@
   }
 
   &:hover {
-    background: #f0f8fa;
+    background: #58c8e4;
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px #dadadde3;
@@ -81,13 +79,4 @@
   z-index: 9999;
   top: 0;
 
-}
-.nav-block {
-  width: 100vw;
-  height: 96px;
-}
-
-.btn-search{
-  height:50px;
-  width: 200px;
 }
