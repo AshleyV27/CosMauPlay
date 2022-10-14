@@ -1,16 +1,4 @@
 
-<div class="search-form-control form-group">
-         <%= form_with url: cosplays_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a cosplay"
-          %>
-           <%= submit_tag "Search", class: "btn btn-primary btn-sm"  %>
-        <% end %>
-</div>
-
-
  <div class="container">
  <div class="animate-charcter"><h1> Cosplays</h1></div>
   <div class="cards">
