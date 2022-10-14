@@ -1,7 +1,16 @@
 
 <div class="card-products">
 <div>
+
 <%= cl_image_tag @cosplay.photo.key,class:'cosplay_image'%>
+
+ <ul><%=@cosplay.name%>
+   <li><%=@cosplay.size%></li>
+   <li><%=@cosplay.category%></li>
+   <li><%=@cosplay.price%></li>
+ </ul>
+ <li><%= cl_image_tag @cosplay.photo.key,class:'cosplay_image'%></li>
+
 </div>
   <div class="card-product-infos">
       <ul><%=@cosplay.name%>

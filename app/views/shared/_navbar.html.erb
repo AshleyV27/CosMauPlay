@@ -2,6 +2,19 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid nav">
 
+
+
+      <div class="search-form-control form-group">
+         <%= form_with url: cosplays_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a cosplay"
+          %>
+           <%= submit_tag "Search", class: "btn btn-primary btn-sm btn-search"  %>
+        <% end %>
+      </div>
+
     <%= link_to "#", class: "navbar-brand logo-icon" do %>
       <%= image_tag "https://images.assetsdelivery.com/compings_v2/doublerdesign/doublerdesign2111/doublerdesign211100139.jpg" %>
     <% end %>
@@ -14,10 +27,14 @@
 
 
 
+
           </button>
 
         </div>
+
       </form>
+    </div>
+
      <ul class="navbar-nav me-auto">
         <%= link_to "Home", "/", class: "nav-link button-nav" %>
         <%= link_to "Cosplays", "/cosplays", class: "nav-link button-nav" %>
